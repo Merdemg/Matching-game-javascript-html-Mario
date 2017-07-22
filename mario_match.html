@@ -1,0 +1,280 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Mario</title>
+    <style>
+        #stage {
+            width: 1024px;
+            height: 768px;
+            position: relative;
+            background-color: darkblue;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .cardTop {
+            width: 80px;
+            height: 80px;
+            margin: 20px;
+            margin-left:35px;
+            margin-right: 35px;
+            padding: 1px;
+            border-width: 1px;
+            border-style: outset;
+            background-color: gray;
+        }
+        .winscreen {
+        position: relative;
+        top: 50px;
+        }
+        h1 {
+            color: white;
+            position: relative;
+            top: 40px;
+        }
+        h3 {
+        color: gray;
+        position: relative;
+        top: 330px;
+        }
+        .mainLogo {
+            position: relative;
+            top: 95px;
+        }
+        button {
+        position: relative;
+        top: 200px;
+        margin: 50px;
+        cursor: pointer;
+        }
+        .restartButtons {
+        position: relative;
+        top: 5px;
+        }
+
+
+
+    </style>
+    <audio id="music" src="data/maintheme.mp3" type="audio/mpeg" loop></audio>
+</head>
+<body>
+    <div id="stage"><div id="mainMenu"><img class="mainLogo" src="data/mariologo.png" /><br />
+                <button onclick="startGame()">START</button>
+                <button onclick="showRules()">RULES</button><br /><h3>Mario, Peach, Luigi, Wario and other characters in the game are registered trademarks of NINTENDO</h3>
+                    </div>
+        <div id="buttons">
+            <a href="JavaScript:onCardClick(1)"><img class ="cardTop" id="Img1" src="data/Question.png" /></a>
+            <a href="JavaScript:onCardClick(2)"><img class ="cardTop" id="Img2" src="data/Question.png" /></a>
+            <a href="JavaScript:onCardClick(3)"><img class ="cardTop" id="Img3" src="data/Question.png" /></a>
+            <a href="JavaScript:onCardClick(4)"><img class ="cardTop" id="Img4" src="data/Question.png" /></a>
+            <a href="JavaScript:onCardClick(5)"><img class ="cardTop" id="Img5" src="data/Question.png" /></a>
+            <a href="JavaScript:onCardClick(6)"><img class ="cardTop" id="Img6" src="data/Question.png" /></a>
+            <a href="JavaScript:onCardClick(7)"><img class ="cardTop" id="Img7" src="data/Question.png" /></a>
+            <a href="JavaScript:onCardClick(8)"><img class ="cardTop" id="Img8" src="data/Question.png" /></a>
+            <a href="JavaScript:onCardClick(9)"><img class ="cardTop" id="Img9" src="data/Question.png" /></a>
+            <a href="JavaScript:onCardClick(10)"><img class ="cardTop" id="Img10" src="data/Question.png" /></a>
+            <a href="JavaScript:onCardClick(11)"><img class ="cardTop" id="Img11" src="data/Question.png" /></a>
+            <a href="JavaScript:onCardClick(12)"><img class ="cardTop" id="Img12" src="data/Question.png" /></a>
+            <a href="JavaScript:onCardClick(13)"><img class ="cardTop" id="Img13" src="data/Question.png" /></a>
+            <a href="JavaScript:onCardClick(14)"><img class ="cardTop" id="Img14" src="data/Question.png" /></a>
+            <a href="JavaScript:onCardClick(15)"><img class ="cardTop" id="Img15" src="data/Question.png" /></a>
+            <a href="JavaScript:onCardClick(16)"><img class ="cardTop" id="Img16" src="data/Question.png" /></a>
+            <a href="JavaScript:onCardClick(17)"><img class ="cardTop" id="Img17" src="data/Question.png" /></a>
+            <a href="JavaScript:onCardClick(18)"><img class ="cardTop" id="Img18" src="data/Question.png" /></a>
+            <a href="JavaScript:onCardClick(19)"><img class ="cardTop" id="Img19" src="data/Question.png" /></a>
+            <a href="JavaScript:onCardClick(20)"><img class ="cardTop" id="Img20" src="data/Question.png" /></a>
+            <a href="JavaScript:onCardClick(21)"><img class ="cardTop" id="Img21" src="data/Question.png" /></a>
+            <a href="JavaScript:onCardClick(22)"><img class ="cardTop" id="Img22" src="data/Question.png" /></a>
+            <a href="JavaScript:onCardClick(23)"><img class ="cardTop" id="Img23" src="data/Question.png" /></a>
+            <a href="JavaScript:onCardClick(24)"><img class ="cardTop" id="Img24" src="data/Question.png" /></a>
+            <a href="JavaScript:onCardClick(25)"><img class ="cardTop" id="Img25" src="data/Question.png" /></a>
+            <a href="JavaScript:onCardClick(26)"><img class ="cardTop" id="Img26" src="data/Question.png" /></a>
+            <a href="JavaScript:onCardClick(27)"><img class ="cardTop" id="Img27" src="data/Question.png" /></a>
+            <a href="JavaScript:onCardClick(28)"><img class ="cardTop" id="Img28" src="data/Question.png" /></a>
+            <a href="JavaScript:onCardClick(29)"><img class ="cardTop" id="Img29" src="data/Question.png" /></a>
+            <a href="JavaScript:onCardClick(30)"><img class ="cardTop" id="Img30" src="data/Question.png" /></a>
+            <a href="JavaScript:onCardClick(31)"><img class ="cardTop" id="Img31" src="data/Question.png" /></a>
+            <a href="JavaScript:onCardClick(32)"><img class ="cardTop" id="Img32" src="data/Question.png" /></a>
+            <a href="JavaScript:onCardClick(33)"><img class ="cardTop" id="Img33" src="data/Question.png" /></a>
+            <a href="JavaScript:onCardClick(34)"><img class ="cardTop" id="Img34" src="data/Question.png" /></a>
+            <a href="JavaScript:onCardClick(35)"><img class ="cardTop" id="Img35" src="data/Question.png" /></a>
+            <a href="JavaScript:onCardClick(36)"><img class ="cardTop" id="Img36" src="data/Question.png" /></a>
+
+        </div>
+        <div id="won"><img class="winscreen" src="data/mariowins.jpg" /><h1 id="finalNote"></h1><button class="restartButtons" onclick="restartGame()">REPLAY</button><button class="restartButtons" onclick="showRules()">RULES</button></div>
+            </div>
+
+
+
+
+
+
+</body>
+</html>
+
+<script>
+    var soundArray = new Array();
+    var soundNameArray = new Array("break.wav", "new.wav", "jump.wav", "coin.wav", "coin2.wav", "won.wav");
+    var imageArray = new Array("data/Question.png", "data/mushroom.png", "data/chain.png", "data/flower.png", "data/goomba.png", "data/luma.png", "data/mario.png", "data/luigi.png", "data/bullet.png", "data/shell.png", "data/peach.png", "data/fish.png", "data/bowser.png", "data/yoshi.png", "data/egg.png", "data/coin.png", "data/flyer.png", "data/wario.png", "data/toad.png");
+    var tileArray = new Array();
+    var cardArray = new Array(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18);
+    var openCards = 0;
+    var couplesFound = 0;
+    var firstCard, firstCardNo, secondCard, secondCardNo;
+    var z = 0;
+
+    var totalTries = 0;
+    var music = document.getElementById("music");
+
+    document.getElementById("buttons").style.display = "none";
+    document.getElementById("won").style.display = "none";
+
+    loadSounds();
+    shuffle(cardArray);
+    console.log(cardArray);
+    loadCards();
+    generateCards();
+
+
+    function loadSounds() {
+        music.preload = "auto";
+        for (var i = 0; i < soundNameArray.length; i++) {
+            soundArray[i] = new Audio("data/" + soundNameArray[i]);
+            soundArray[i].preload = "auto";
+            soundArray[i].load();
+        }
+    }
+
+    function playMusic() {
+        music.play();
+
+    }
+    function startGame() {
+        soundArray[1].play();
+        document.getElementById("mainMenu").style.display = "none";
+        document.getElementById("buttons").style.display = "inline";
+        document.getElementById("won").style.display = "none";
+        playMusic();
+
+    }
+    function showRules() {
+        soundArray[0].play();
+        window.alert("Try to find the 18 matching Super Mario character and object cards in least tries. \nThere is no time limit, so rather than rushing, take your time and try to memorize and remember the tiles.");
+    }
+
+
+
+    function loadCards() {
+        for (var i = 0; i < imageArray.length; i++) {
+            var tempSrc = imageArray[i];
+            imageArray[i] = new Image();
+            imageArray[i].src = tempSrc;
+        }
+    }
+    function generateCards() {
+        for (var i = 1; i <= 36; i++) {
+            var tile = new Object();
+            tile.obj = document.getElementById("Img" + i);
+            tile.top = imageArray[0].src;
+            z = cardArray[i-1];
+            tile.alt = imageArray[z].src;
+            console.log(imageArray[z].src);
+
+            tile.obj.src = tile.top;
+            tileArray.push(tile);
+        }
+    }
+
+
+
+    function onCardClick(id) {
+        soundArray[2].play();
+
+        openCards++;
+        if (openCards === 3) {
+            openCards = 1;
+            for (var i = 0; i <= 35; i++) {
+                tileArray[i].obj.src = tileArray[i].top;
+            }
+        }
+        //tileArray[id - 1].obj = document.getElementById("Img" + id);
+        tileArray[id - 1].obj.src = tileArray[id - 1].alt
+    
+                if (openCards == 1) {
+                    firstCardNo = id;
+                    firstCard = cardArray[id - 1];
+                }
+                else if (openCards == 2) {
+                    secondCardNo = id;
+                    secondCard = cardArray[id - 1];
+                    console.log(firstCard);
+                    console.log(secondCard);
+
+                    if (firstCardNo != secondCardNo)
+                        setTimeout(function () { checkifmatch(); }, 100);
+                    else
+                        openCards--;
+                }
+    }
+    function checkifmatch() {
+        totalTries++;
+        if (firstCard == secondCard) {
+            soundArray[Math.floor(Math.random() + 4)].play();
+           console.log("match");
+           console.log(firstCardNo);
+           console.log(secondCardNo);
+          
+           document.getElementById("Img" + secondCardNo).style.visibility = "hidden";
+           document.getElementById("Img" + firstCardNo).style.visibility = "hidden";
+           couplesFound++;
+           if (couplesFound == 18)
+               gameWon();
+        }
+   }
+    function gameWon() {
+       music.pause();
+       soundArray[5].play();
+       document.getElementById("won").style.display = "block";
+       document.getElementById("buttons").style.display = "none";
+       document.getElementById("finalNote").innerHTML = "You won in " + totalTries + " tries!"
+   }
+
+    function shuffle(array) {
+        var currentIndex = array.length, temporaryValue, randomIndex;
+
+        while (0 !== currentIndex) {
+
+            randomIndex = Math.floor(Math.random() * currentIndex);
+            currentIndex--;
+
+            temporaryValue = array[currentIndex];
+            array[currentIndex] = array[randomIndex];
+            array[randomIndex] = temporaryValue;
+        }
+        return array;
+    }
+
+    function restartGame() {
+        tileArray = new Array();
+        openCards = 0;
+        couplesFound = 0;
+        z = 0;
+        totalTries = 0;
+        shuffle(cardArray);
+        console.log(cardArray);
+        generateCards();
+        playMusic();
+        document.getElementById("mainMenu").style.display = "none";
+        document.getElementById("buttons").style.display = "inline";
+        document.getElementById("won").style.display = "none";
+        for (var i = 1; i <= 36; i++) {
+            document.getElementById("Img" + i).style.visibility = "visible";
+        }
+        for (var i = 0; i <= 35; i++) {
+            tileArray[i].obj.src = tileArray[i].top;
+        }
+    }
+
+</script>
